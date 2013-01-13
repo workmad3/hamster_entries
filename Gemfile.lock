@@ -96,6 +96,10 @@ GEM
     addressable (2.3.2)
     atomic (1.0.1)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
+    bootswatch-rails (0.3.0)
+      railties (>= 3.1)
     builder (3.1.4)
     bullet (4.3.0)
       uniform_notifier
@@ -207,6 +211,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord-deprecated_finders!
   arel!
+  bootstrap-sass
+  bootswatch-rails
   bullet
   capybara
   capybara-webkit
