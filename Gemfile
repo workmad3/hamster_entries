@@ -15,6 +15,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'devise', github: 'idl3/devise', branch: 'rails4'
 
 gem "puma"
 
@@ -22,8 +23,6 @@ group :development, :test do
   gem "rspec-rails"
   gem "jasmine"
   gem "jasmine-ajax"
-  gem "jasminerice"
-  gem "jasminerice-runner"
   gem "bullet"
 end
 
