@@ -10,6 +10,7 @@ gem 'pg'
 group :assets do
   gem "bootstrap-sass"
   gem "bootswatch-rails"
+  gem 'modernizr-rails'
   gem 'sprockets-rails', github: 'rails/sprockets-rails'
   gem 'sass-rails',   github: 'rails/sass-rails'
   gem 'coffee-rails', github: 'rails/coffee-rails'
