@@ -52,14 +52,8 @@ if you need the modernizr, but remember to only do the actual checks
       <%= yield %>
     </div>
   </div>
-  <hr/>
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span10 offset2">
-        &copy; 2013, David Workman
-      </div>
-    </div>
-  </div>
+
+  <%= render "shared/footer" %>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
   <%= javascript_include_tag 'application' %>
