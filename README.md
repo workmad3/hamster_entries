@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/workmad3/hamster_entries.png)]
+[![Build Status](https://travis-ci.org/workmad3/hamster_entries.png)](https://travis-ci.org/workmad3/hamster_entries)
 
 Hamster Entries
 ===============
