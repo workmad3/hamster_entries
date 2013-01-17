@@ -41,17 +41,11 @@ if you need the modernizr, but remember to only do the actual checks
 
   <!-- Add your site or application content here -->
   <div class="container-fluid">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <%= link_to "Hamsters Online", root_path, class: "brand" %>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
+    <%= render "shared/header" %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </div>
 
-  <%= render "shared/footer" %>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
   <%= javascript_include_tag 'application' %>
