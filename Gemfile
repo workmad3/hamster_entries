@@ -19,6 +19,8 @@ end
 
 gem 'jquery-rails'
 gem 'devise', github: 'idl3/devise', branch: 'rails4'
+gem 'sanitize'
+gem 'rack-policy'
 
 gem "puma"
 

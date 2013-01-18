@@ -1,0 +1,1 @@
+Rails.application.config.middleware.insert_before ActionDispatch::Cookies, Rack::Policy::CookieLimiter, consent_token: 'rack.policy'
