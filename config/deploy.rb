@@ -6,6 +6,9 @@ set :repository,  "git@github.com:workmad3/hamster_entries.git"
 set :user, 'hamster-entries'
 set :use_sudo, false
 
+# Fake secret key base for running in production env
+set :default_environment, "secret_key_base" => "123456789012345678901234567890"
+
 set :scm, :git
 set :deploy_via, :remote_cache
 set :deploy_to, '/home/hamster-entries'
