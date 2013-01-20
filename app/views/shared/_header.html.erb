@@ -2,8 +2,24 @@
   <div class="navbar-inner">
     <%= link_to "Hamsters Online", root_path, class: "brand" %>
     <ul class="nav">
-      <li><%= link_to "Clubs", "#" %></li>
-      <li><%= link_to "Shows", "#" %></li>
+      <li class="dropdown">
+      <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+        Clubs
+        <span class="caret"></span>
+      <% end %>
+      <ul class="dropdown-menu">
+        <li class="nav-header">Your clubs</li>
+      </ul>
+      </li>
+      <li class="dropdown">
+      <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+        Shows
+        <span class="caret"></span>
+      <% end %>
+      <ul class="dropdown-menu">
+        <li class="nav-header">Your Shows</li>
+      </ul>
+      </li>
     </ul>
     <ul class="pull-right nav">
       <li><%= link_to "Login", new_user_session_path %></li>
