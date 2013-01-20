@@ -26,4 +26,17 @@ require 'bundler/capistrano'
 require "rvm/capistrano"
 load 'deploy/assets'
 
-before "deploy:assets:precompile", "deploy:assets:clean"
+namespace :deploy do
+  namespace :assets do
+    task :update_asset_mtimes do
+    end
+
+    task :precompile do
+      run <<-CMD.compact
+        cd -- #{latest_release.shellescape} &&
+        #{rake} RAILS_ENV=#{rails_env.to_s.shellescape} #{asset_env}
+        assets:precompile
+      CMD
+    end
+  end
+end

@@ -34,4 +34,4 @@ test:
 
 production:
   <<: *SETUP
-  database: hamster_entries_production
+  database: hamster-entries
