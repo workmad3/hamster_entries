@@ -28,6 +28,13 @@ require 'capistrano-unicorn'
 load 'deploy/assets'
 
 namespace :deploy do
+  task :symlink_secret_key do
+    run <<-CMD.compact
+      cd -- #{latest_release.shellescape} &&
+      rm  #{latest_release}/config/initializers/secret_token.rb &&
+      ln -s -- #{shared_path.shellescape}/secret_token.rb #{latest_release.shellescape}/config/initializers/secret_token.rb
+    CMD
+  end
   namespace :assets do
     task :update_asset_mtimes do
     end
