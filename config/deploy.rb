@@ -1,6 +1,6 @@
 set :application, "Hamsters Online"
 set :rvm_type, :system
-set :bundle_without, [:development, :test]
+set :bundle_without, [:development, :test, :deploy]
 
 set :repository,  "git@github.com:workmad3/hamster_entries.git"
 set :user, 'hamster-entries'
@@ -24,6 +24,7 @@ after "deploy:restart", "deploy:cleanup"
 
 require 'bundler/capistrano'
 require "rvm/capistrano"
+require 'capistrano-unicorn'
 load 'deploy/assets'
 
 namespace :deploy do

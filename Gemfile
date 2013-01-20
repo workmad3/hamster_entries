@@ -23,6 +23,7 @@ gem 'sanitize'
 gem 'rack-policy'
 
 gem "puma"
+gem "unicorn"
 
 group :development, :test do
   gem "rspec-rails"
@@ -35,4 +36,10 @@ group :test do
   gem "capybara"
   gem "capybara-webkit"
   gem "database_cleaner"
+end
+
+group :deploy do
+  gem 'capistrano', require: false
+  gem 'capistrano-unicorn', require: false
+  gem 'rvm-capistrano', require: false
 end
